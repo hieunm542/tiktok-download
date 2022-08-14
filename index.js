@@ -20,7 +20,8 @@ var server = app.listen(3000, function () {
   );
 });
 app.get("/", function (req, res) {
-  let url = "https://www.tiktok.com/@minhank0201/video/7129095061777796378";
+  let url = req.query.url;
+//   let url = "https://www.tiktok.com/@minhank0201/video/7129095061777796378";
   //res.write("Hello World!");
   Axios.get("https://ttdownloader.com/")
     .then((data) => {
